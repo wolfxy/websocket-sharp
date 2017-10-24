@@ -25,6 +25,7 @@ It supports:
     <RepositoryUrl>https://github.com/PingmanTools/websocket-sharp/</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageTags>websocket</PackageTags>
+    <PackageId>WebSocketSharp-netstandard</PackageId>
   </PropertyGroup>
 
 
