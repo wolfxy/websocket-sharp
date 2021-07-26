@@ -190,7 +190,7 @@ namespace WebSocketSharp
     private static void defaultOutput (LogData data, string path)
     {
       var log = data.ToString ();
-      Console.WriteLine (log);
+      //Console.WriteLine (": " + path + " " + log);
       if (path != null && path.Length > 0)
         writeToFile (log, path);
     }
@@ -207,9 +207,11 @@ namespace WebSocketSharp
           _output (data, _file);
         }
         catch (Exception ex) {
+
           data = new LogData (LogLevel.Fatal, new StackFrame (0, true), ex.Message);
-          Console.WriteLine (data.ToString ());
-        }
+          writeToFile(data.ToString(), _file);
+                    //Console.WriteLine ("Error: " + data.ToString ());
+         }
       }
     }
 
